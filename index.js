@@ -1,5 +1,4 @@
 const http = require('http');
-
 var friends = require("./friends.json"); // Once for all times
 
 const server = http.createServer((request, response) => {
@@ -60,7 +59,10 @@ const server = http.createServer((request, response) => {
     );
     response.end();
 });
-
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 
 
