@@ -1,6 +1,6 @@
 const http = require('http');
 var friends = require("./friends.json"); // Once for all times
-
+let host = '0.0.0.0';
 const server = http.createServer((request, response) => {
     response.statusCode = 200;
     response.setHeader('Content-type', 'text/html');
